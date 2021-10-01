@@ -1,0 +1,33 @@
+h1{
+    font-size:12px;
+    font-weight: 700;
+}
+body{
+    background-color: bisque;
+}
+.flex.container{
+    display:flex;
+    flex-direction: column;
+}
+/*desktop*/
+@media(min-width:768px){
+    body{
+        background-color: burlywood;
+        }
+        .flex-container{
+            display:flex;
+            flex-direction:row;
+            justify-content: space-between;
+        }
+    }
+    /*desktop first*/
+    input{
+        background-color: cadetblue;
+
+    }
+    @media (max-width:768px) {
+        input{
+            background-color: darkgoldenrod;
+        }
+    }
+

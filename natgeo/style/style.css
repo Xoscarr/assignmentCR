@@ -1,0 +1,356 @@
+/*global*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+html{
+    font-size:62.5%;
+}
+
+body{
+    font-family:'roboto', sans-serif ;
+    background-color: black;
+
+}
+
+
+img{
+    max-width: 100%;
+}
+
+/*utilities*/
+.uppercases-spacing{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-decoration: none;
+
+}
+
+/*menu*/
+nav.menu{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:.5rem;
+    height:3.5rem;
+    background-color:white; 
+}
+.icons-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 25rem;
+}
+nav.menu a, nav.menu i{
+    color: black; 
+    font-size:1.3rem;
+}
+.small-logo{
+    height:4rem; 
+}
+.large-logo{
+    display:none;
+    height:4rem;
+}
+ 
+.fa-search,.link-renew,.link-menu{
+    display:none;
+
+}
+nav.menu a.link-subcribe{
+    background-size: 200% 100%;
+    background-position:100% 0%;
+    background-image: linear-gradient(to left, black 50%, rgb(255, 208, 0) 50%);
+    transition: background-position .2s cubic-bezier(.47,.1,1,.63), color .2s ease-in-out;
+    background-color: black;
+    color:white;
+    padding: 1.4rem;
+    text-decoration: none;
+
+
+
+    
+
+}
+nav.menu a.link-subcribe:hover{
+    background-position:0% 0;
+    color:black; 
+    cursor: pointer;
+}
+@media(min-width:768px){
+    .small-logo{
+        display:none;
+    }
+    .large-logo{
+        display:block;
+        height:3rem;
+    }
+    .fa-search,
+    .link-renew,
+    .link-menu{
+        display:block;
+        margin: 0 2.5rem;
+    }
+}
+
+
+/*header*/
+header h1{
+    font-size: 3.8rem; 
+    color:white; 
+    text-align: center;
+    letter-spacing: 8px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+
+}
+header p{
+    color: white;
+    font-size:1.5rem; 
+    text-align: center;
+    letter-spacing: 1px;
+    
+}
+.yellow-bar{
+    background-color: rgb(255, 208, 0);
+    width: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    border-top: rgb(255, 208, 0)solid;
+    border-bottom: rgb(255, 208, 0);
+    border-left: rgb(255, 208, 0);
+    border-right: rgb(255, 208, 0);
+}
+p span{
+    
+    text-decoration: underline rgb(253, 213, 34);
+
+}
+
+header.div{
+    font-weight: bold;
+    border-bottom:rgb(253, 213, 34); 
+    color:rgb(253, 213, 34);
+
+}
+@media(min-width:768px){
+    header h1{
+        font-size: 4.5rem;
+
+    }
+}
+
+
+/*main*/
+
+.news-container{
+    color:white;
+
+}
+.picks-container{
+    color:white; 
+}
+@media(min-width:768px){
+    .container-fluid{
+        display:flex;
+        flex-direction: row-reverse;
+        width: 70%;
+        margin:1rem auto; 
+    }
+    .news-container{
+        flex-basis: 70%; 
+    }
+    .picks-container{
+        flex-basis: 30%;
+    }
+}
+/*main news*/
+.main-news{
+    position: relative;/* parent container should be ralative*/
+    width:44rem;
+    margin: 1rem auto;
+    overflow: hidden;
+    
+}
+@media (min-width: 768px) {
+    .main-news{
+        width:65rem;
+        margin-right:100px;
+    }
+}
+
+.main-news-text{
+    position: absolute;
+    top: 8rem;
+    left:2rem; 
+
+}
+.main-news-text h3{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: white;
+
+}
+.main-news-text p.main-text{
+    font-size: 3.1rem; 
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+p.news-icon{
+    font-size:1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+p.news-icon i{
+    margin-right:1rem;
+    font-size:1.5rem;
+
+}
+.main-news:hover img{
+    cursor: pointer;
+    transform: scale(1.2); 
+}
+
+/*secondary news*/
+.secondary-news{
+    margin: 1rem auto;
+    width: 44rem; 
+    overflow: hidden;
+
+
+}
+.secondary-news img{
+    width:43.5rem; 
+}
+.secondary-news-text{
+    background-color:white; 
+    width: 39.5rem;
+    margin-top: -1.5rem;
+    color:black; 
+    padding:2rem;
+
+    
+}
+@media(min-width:768px){
+    .secondary-news-container{
+        display:flex;
+        width:60rem;
+        justify-content: space-around;
+
+    }
+    .secondary-news-text{
+        width:25.5rem;
+
+    }
+    .secondary-news-img{
+        width:29.5rem;
+    }
+
+}
+.secondary-news-text h3{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: gray;
+
+
+}
+.secondary-news-text h3 span{
+    font-weight: 400;
+}
+
+.secondary-news-text p.main-text{
+    font-size:2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+}
+.secondary-news:hover img{
+    border-bottom: 5px solid rgb(253, 213, 34);
+
+}
+/* todays picks*/
+.picks-container{
+    width: 90%;
+    margin: 1rem auto;
+}
+.picks-container h2{
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    border-left: 5px solid rgb(253, 213, 34); 
+    padding-left: 2rem;
+    letter-spacing: 3px;
+}
+
+
+.single-pick{
+    display:flex;
+    width:90%;
+    margin:1rem auto;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.single-pick img{
+    width: 8rem; 
+    
+}
+.single-pick-text{
+    flex-basis: 32rem;
+}
+.single-pick-text h3{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: gray;
+}
+.single-pick-text p{
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+@media (min-width:768px) {
+    .single-pick img{
+        width:9rem;
+        height: 9rem;
+        margin-right: 2rem;
+
+    }
+}
+/*sign up*/
+.sign-up{
+    position: relative;/* parent container should be ralative*/
+    overflow: hidden;
+    width:44rem;
+    margin: 2rem 3rem;
+    
+}
+.sign-up-text h4{
+    text-transform: uppercase;
+    font-size:2.5rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin: 1px auto;
+ 
+}
+.sign-up-text p{
+    font-size:1.4rem; 
+
+}
+
+.sign-up-text {
+    position: absolute; 
+    text-align: center;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: white;
+    top:1rem;
+    bottom:10rem;
+}
+.sign-up-text input{
+    width:80%;
+    height: 80%;
+}
+/*footer*/
